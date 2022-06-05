@@ -25,7 +25,7 @@ function App() {
       </section>
     );
   }
-  const { id, order, title, dates, duties, company } = jobs[value];
+  const { title, dates, duties, company } = jobs[value];
   return (
     <main>
       <section className="section jobs">
@@ -34,7 +34,19 @@ function App() {
           <div className="underline"></div>
         </div>
         <div className="jobs-center">
-          <div className="btn-container"></div>
+          <div className="btn-container">
+            {jobs.map((item, index) => {
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => setValue(index)}
+                  className="job-btn"
+                >
+                  {item.company}
+                </button>
+              );
+            })}
+          </div>
           <article className="job-info">
             <h3>{title}</h3>
             <h4>{company}</h4>
