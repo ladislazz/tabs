@@ -1,2 +1,2 @@
 
-Link: https://gatsby-strapi-portfolio-project.netlify.app/
+Link: https://dynamic-tabs-react-proj.netlify.app/
