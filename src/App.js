@@ -11,13 +11,19 @@ function App() {
     const jobs = await response.json();
     setJobs(jobs);
     setIsLoading(false);
-    console.log(jobs);
   };
 
   useEffect(() => {
     fetchJobs();
   }, []);
 
+  if (isLoading) {
+    return (
+      <section className="section loading">
+        <h1>Loading...</h1>
+      </section>
+    );
+  }
   return <h2>tabs project setup</h2>;
 }
 
